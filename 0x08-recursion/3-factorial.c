@@ -8,16 +8,18 @@
 
 int factorial(int n)
 {
-	int f = 1;
-
-	if (n == 1)
+	if (n < 0)
 	{
-		_putchar('1');
-	}
-	else if (n > 1)
-	{
-		f *= factorial(n - 1);
+		_putchar("-1");
 	}
 
-	return (f);
+	else if (n == 0)
+	{
+		_putchar("1");
+	}
+	else
+	{
+		return (n * factorial(n - 1));
+	}
+
 }
