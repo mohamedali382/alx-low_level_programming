@@ -1,18 +1,6 @@
 #include "main.h"
 
 /**
- * is_prime_number - that returns 1 if the input integer is a
- *  prime number, otherwise return 0
- *  @n: input number
- *  Return: 0 or 1
-*/
-
-int is_prime_number(int n)
-{
-	return (prime(n, 1));
-}
-
-/**
  * prime - function that check the prime numbers
  * @n: input number
  * @i: checked by number
@@ -41,4 +29,16 @@ int prime(int n, int i)
 	{
 		return (prime(n, i + 1));
 	}
+}
+
+/**
+ * is_prime_number - that returns 1 if the input integer is a
+ *  prime number, otherwise return 0
+ *  @n: input number
+ *  Return: 0 or 1
+*/
+
+int is_prime_number(int n)
+{
+	return (prime(n, 1));
 }
