@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * sqrt - square root function
+ * sqrtt - square root function
  * @n: input number
  * @sq: square root of input number
  * Return: square root of @n
 */
 
-int sqrt(int n, int sq)
+int sqrtt(int n, int sq)
 {
         if (sq * sq == n)
         {
@@ -15,7 +15,7 @@ int sqrt(int n, int sq)
         }
         else if (sq * sq < n)
         {
-                return (sqrt(n, sq + 1));
+                return (sqrtt(n, sq + 1));
         }
         else
         {
@@ -33,5 +33,5 @@ int sqrt(int n, int sq)
 
 int _sqrt_recursion(int n)
 {
-	return (sqrt(n, 1));
+	return (sqrtt(n, 1));
 }
