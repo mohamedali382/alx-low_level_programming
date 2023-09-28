@@ -12,16 +12,28 @@
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
+	return (sqrt(n, 1));
+}
+
+/**
+ * sqrt - square root function
+ * @n: input number
+ * @sq: square root of input number
+ * Return: square root of @n
+*/
+
+int sqrt(int n, int sq)
+{
+	if (sq * sq == n)
 	{
-		return (-1);
+		return (sq);
 	}
-	else if (sqrt(n) * sqrt(n) != n)
+	else if (sq * sq < n)
 	{
-		return (-1);
+		return (sqrt(n, sq + 1));
 	}
 	else
 	{
-		return (sqrt(_sqrt_recursion(n)));
+		return (-1);
 	}
 }
