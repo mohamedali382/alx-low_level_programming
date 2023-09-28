@@ -9,18 +9,18 @@
 
 int sqrtt(int n, int sq)
 {
-        if (sq * sq == n)
-        {
-                return (sq);
-        }
-        else if (sq * sq < n)
-        {
-                return (sqrtt(n, sq + 1));
-        }
-        else
-        {
-                return (-1);
-        }
+	if (sq * sq == n)
+	{
+		return (sq);
+	}
+	else if (sq * sq < n)
+	{
+		return (sqrtt(n, sq + 1));
+	}
+	else
+	{
+		return (-1);
+	}
 }
 
 /**
