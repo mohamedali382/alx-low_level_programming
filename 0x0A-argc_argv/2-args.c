@@ -7,7 +7,7 @@
  * Return: 0
 */
 
-int main(int argc, char *argv[])
+int main(int argc, char const *argv[])
 {
 	for (int i = argc - 1; i => 0; i--)
 	{
