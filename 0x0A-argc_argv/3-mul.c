@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main -  that multiplies two numbers
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
 
 		for (int i = 1; i < argc; i++)
 		{
-			res *= strtol(argv[i], 0, 10);
+			res *= strtol(argv[i], NULL, 10);
 		}
 		printf("%s\n", res);
 		return (0);
