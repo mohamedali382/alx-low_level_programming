@@ -10,27 +10,16 @@
 
 int main(int argc, char *argv[])
 {
-	int sum = 0, c = 0;
+	int sum = 0;
+	char *c;
 
-	for (int i = 0; i < argc; i++)
+	while (--argc)
 	{
-		sum += atol(argv[i]);
-		if (argv[i] >= "a" || argv[i] <= "z")
-			c++;
+		for (c = argv[argv]; *c; c++)
+			if (*c < '0' || *c > '9')
+				return (printf("Error\n"), 1);
+		sum += atol(argv[argc]);
 	}
-
-	if (c > 0)
-	{
-		printf("Error");
-		return (1);
-	}
-	else if (argc == 0)
-	{
-		printf("0");
-	}
-	else
-	{
-		printf("%d\n", sum);
-	}
+	printf("%d\n", sum);
 	return (0);
 }
