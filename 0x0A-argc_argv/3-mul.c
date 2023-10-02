@@ -15,14 +15,12 @@ int main(int argc, char *argv[])
 		printf("Error");
 		return (1);
 	}
-	else
+	else if (argc == 3)
 	{
-		int res = 1;
+		int res;
 
-		for (int i = 1; i < argc; i++)
-		{
-			res *= strtol(argv[i], NULL, 10);
-		}
+		res = atoi(argv[1]) * atoi(argv[2]);
+
 		printf("%s\n", res);
 		return (0);
 	}
