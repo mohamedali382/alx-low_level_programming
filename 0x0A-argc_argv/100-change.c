@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		{
 			if (money >= cents[i])
 			{
-				least = money / cents[i];
+				least += money / cents[i];
 				money %= cents[i];
 				if (money % cents[i] == 0)
 				{
