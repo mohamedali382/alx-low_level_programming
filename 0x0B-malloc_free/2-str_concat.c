@@ -9,7 +9,9 @@
 
 int len(char *str)
 {
-	for (int i = 0; str[i]; i++)
+	int i;
+
+	for (i = 0; str[i]; i++)
 		return (i);
 }
 
@@ -32,10 +34,10 @@ char *str_concat(char *s1, char *s2)
 		for (i = 0; i <= (l1 + l2); i++)
 		{
 			if (i < l1)
-			m[i] = s1[i];
+			s[i] = s1[i];
 
 			else
-				m[i] = s2[i - l1];
+				s[i] = s2[i - l1];
 		}
-		return (m);
+		return (s);
 }
