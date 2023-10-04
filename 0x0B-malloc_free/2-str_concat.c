@@ -35,6 +35,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "\0";
 	}
 
+
 	int l1 = len(s1);
 	int l2 = len(s2);
 	int i;
