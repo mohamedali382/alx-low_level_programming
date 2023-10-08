@@ -3,7 +3,7 @@
 
 /**
  * malloc_checked -  function that allocates memory
- * @b: input int
+ * @b: input init
  * Return: a pointer to the allocated memory
 */
 
@@ -13,7 +13,7 @@ void *malloc_checked(unsigned int b)
 
 	ptr = (int *)malloc(b * sizeof(int));
 
-	if (ptr == NULL)
+	if (ptr == 0)
 		printf("98");
 	return (ptr);
 }
