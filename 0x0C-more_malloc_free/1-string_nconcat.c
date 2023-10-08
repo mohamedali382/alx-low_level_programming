@@ -13,14 +13,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int str1, str2, i, j;
 	char *str;
 
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
 
 	for (str1 = 0; str1[s1] != '\0'; str1++)
 		;
