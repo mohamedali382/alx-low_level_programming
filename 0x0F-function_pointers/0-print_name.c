@@ -10,6 +10,6 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	f = &name;
-	printf("%s\n", f);
+	if (f && name)
+		f(name);
 }
