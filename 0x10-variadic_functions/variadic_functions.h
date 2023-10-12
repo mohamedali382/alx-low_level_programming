@@ -13,7 +13,7 @@
 */
 typedef struct token
 {
-	char *token;
+	char token[4];
 	void (*f)(char *, va_list);
 } token_t;
 
