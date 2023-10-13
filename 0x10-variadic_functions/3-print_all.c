@@ -58,7 +58,7 @@ void p_string(char *sep, va_list ptr)
 void print_all(const char *const format, ...)
 {
 	int i = 0, j;
-	char *sep = "";
+	char *sep;
 	va_list ptr;
 	token_t tokens[] = {
 		{"c", p_char},
