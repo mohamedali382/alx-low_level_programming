@@ -30,7 +30,7 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_H = malloc(sizeof(list_t));
 
-	if (!head || !str)
+	if (!head || !new_H)
 		return (NULL);
 	if (str)
 	{
