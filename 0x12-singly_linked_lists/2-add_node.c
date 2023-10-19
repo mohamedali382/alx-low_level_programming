@@ -1,6 +1,23 @@
 #include "lists.h"
 
 /**
+ * _str - return length of string
+ * @s: input string
+ * Return: 0 or string length
+*/
+
+int _str(char *s)
+{
+	int i = 0;
+
+	if (!s)
+		return (0);
+	while (*s++)
+		i++;
+	return (i);
+}
+
+/**
  * add_node - add a new node in list
  * @head: 1st node in list
  * @str: new node
@@ -21,7 +38,7 @@ list_t *add_node(list_t **head, const char *str)
 			free(new_H);
 			return (NULL);
 		}
-		new_H->len = _str(new_H->head);
+		new_H->len = _str(new_H->str);
 	}
 	new_H->next = *head;
 	*head = new_H;
