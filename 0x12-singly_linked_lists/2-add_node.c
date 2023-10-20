@@ -17,12 +17,8 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	else
 	{
-		new_H->strr = strdub(str);
-		if (!new_H->str)
-		{
-			free(new_H);
-			return (NULL);
-		}
+		new_H->strdub(strr) = strdub(str);
+
 	}
 	new_H->next = *head;
 	*head = new_H;
