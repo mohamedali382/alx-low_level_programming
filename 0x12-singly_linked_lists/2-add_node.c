@@ -11,13 +11,15 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_H = malloc(sizeof(list_t));
 
-	if (!head || !new_H)
+	if (!head)
+	{
 		return (NULL);
-	if (str)
+	}
+	else
 	{
 		new_H->str = strdub(str);
 		if (!new_H->str)
-		{i
+		{
 			free(new_H);
 			return (NULL);
 		}
