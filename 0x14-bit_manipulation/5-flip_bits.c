@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "list.h"
 
 /**
  * flip_bits - flip the bit number
