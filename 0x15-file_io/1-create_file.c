@@ -1,24 +1,6 @@
 #include "main.h"
 
 /**
- * strlen - return the length of string
- * @c: input string
- *
- * Return: length of the input string
-*/
-
-int strlen(char *c)
-{
-	int i = 0;
-
-	if (!c)
-		return (0);
-	while (*c++)
-		i++;
-	return (i);
-}
-
-/**
  * create_file - creates a file.
  * @filename: name of created file
  * @text_content: NULL terminated string to write to the file
