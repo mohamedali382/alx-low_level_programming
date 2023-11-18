@@ -10,24 +10,19 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fb, count;
+		int c, w;
 
-	count = open(filename, O_RDONLY | O_WRONLY | O_CREAT | O_TRUNC);
-
-	if (!filename || count < 0)
+	c = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	if (c < 0 || !filename)
 		return (-1);
-
 	if (!text_content)
 	{
-		write(count, '\0', 1);
+		write(c, '\0', 1);
 		return (1);
 	}
-
-	fb = write(count, text_content, sizeof(text_content));
-
-	if (fb < 0)
+	w = write(c, text_content, strlen(text_content));
+	if (w < 0)
 		return (-1);
-
-	close(count);
+	close(c);
 	return (1);
 }
